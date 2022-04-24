@@ -1,6 +1,5 @@
 package cn.ref.model;
 
-import android.util.Log;
 
 import cn.ref.Logs;
 
@@ -12,11 +11,11 @@ import cn.ref.Logs;
  * @author: sanbo
  */
 public class RefCus {
-    
+
     public RefCus() {
         Logs.i("RefCus 构造函数");
     }
-    
+
     public void sayHello(String text, ICallback callback) {
         Logs.i("sayHello :[" + text + "] , will callback...");
         if (callback != null) {

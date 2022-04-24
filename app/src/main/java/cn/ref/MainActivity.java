@@ -103,7 +103,7 @@ public class MainActivity extends Activity {
             //  refCus.getDeclaredMethod("sayHello" ==等价于===>  fc.sayhello 反射发现 ---可以理解成安全机制，有才能调用
             // invoke===>  fc.sayhello("xxx,new ICallback() {.....})  ---- 真正调用
             Method sayHello = refCus.getDeclaredMethod("sayHello", new Class[]{String.class, callback});
-            if ( sayHello!=null){
+            if (sayHello != null) {
                 sayHello.invoke(refCus.newInstance(), new Object[]{text, mObj});
             }
         } catch (Exception e) {
@@ -148,14 +148,14 @@ public class MainActivity extends Activity {
             }
         });
 
-        ICallback temp=new ICallback() {
+        ICallback temp = new ICallback() {
             @Override
             public void sayOver(String text) {
                 Logs.i("非空构造测试2--sayOver:" + text);
             }
         };
 
-        nos.sayHello("非空构造测试2",temp );
+        nos.sayHello("非空构造测试2", temp);
         ////////////////////////
     }
 
@@ -176,7 +176,6 @@ public class MainActivity extends Activity {
 //            Method m = ms[i];
 //            Logs.i("方法" + m.toString());
 //        }
-
 
 
         ///
@@ -205,13 +204,12 @@ public class MainActivity extends Activity {
 
         Class egMode = Class.forName(ErDogModel.class.getName());
         // 构造函数
-        Object model=  egMode.newInstance();
+        Object model = egMode.newInstance();
 
-        Object proxys= Proxy.newProxyInstance(getClassLoader(),new Class[]{Class.forName("cn.ref.model.IKissBaby")},new Mhandler());
-        Method m =  egMode.getMethod("ikk",new Class[]{String.class,Class.forName("cn.ref.model.IKissBaby")});
-       Logs.i("proxys:"+proxys);
-       Logs.i("m:"+m);
-
+        Object proxys = Proxy.newProxyInstance(getClassLoader(), new Class[]{Class.forName("cn.ref.model.IKissBaby")}, new Mhandler());
+        Method m = egMode.getMethod("ikk", new Class[]{String.class, Class.forName("cn.ref.model.IKissBaby")});
+        Logs.i("proxys:" + proxys);
+        Logs.i("m:" + m);
 
 
     }
