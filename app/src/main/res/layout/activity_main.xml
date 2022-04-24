@@ -6,15 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <Button
         android:id="@+id/btnA"
         android:layout_width="wrap_content"
@@ -31,10 +22,32 @@
         android:id="@+id/btnB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="144dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="72dp"
         android:onClick="onClick"
         android:text="反射调用"
         app:layout_constraintStart_toStartOf="@+id/btnA"
         app:layout_constraintTop_toTopOf="@+id/btnA" />
+
+    <Button
+        android:id="@+id/buttonC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:onClick="onClick"
+        android:text="C"
+        app:layout_constraintStart_toStartOf="@+id/btnB"
+        app:layout_constraintTop_toBottomOf="@+id/btnB" />
+
+    <Button
+        android:id="@+id/buttonD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:onClick="onClick"
+        android:text="D"
+        app:layout_constraintStart_toStartOf="@+id/buttonC"
+        app:layout_constraintTop_toBottomOf="@+id/buttonC" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
