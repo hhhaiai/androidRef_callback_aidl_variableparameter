@@ -1,7 +1,7 @@
 package cn.ref.model;
 
 
-import cn.ref.Logs;
+import cn.ref.utils.Logs;
 
 /**
  * @Copyright © 2020 analysys Inc. All rights reserved.

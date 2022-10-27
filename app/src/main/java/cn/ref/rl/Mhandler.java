@@ -3,7 +3,7 @@ package cn.ref.rl;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 
-import cn.ref.Logs;
+import cn.ref.utils.Logs;
 
 /**
  * @Copyright © 2020 sanbo Inc. All rights reserved.
